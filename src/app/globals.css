@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --color-tangaroa-50: #e9f7ff;
+  --color-tangaroa-100: #d8efff;
+  --color-tangaroa-200: #b8e1ff;
+  --color-tangaroa-300: #8ecaff;
+  --color-tangaroa-400: #61a6ff;
+  --color-tangaroa-500: #3d82ff;
+  --color-tangaroa-600: #1b59ff;
+  --color-tangaroa-700: #114af1;
+  --color-tangaroa-800: #1141c2;
+  --color-tangaroa-900: #183e97;
+  --color-tangaroa-950: #0a183e;
+
+  --color-putty-50: #fcf9f0;
+  --color-putty-100: #f8f0dc;
+  --color-putty-200: #f1deb7;
+  --color-putty-300: #e8c88b;
+  --color-putty-400: #dda85a;
+  --color-putty-500: #d69039;
+  --color-putty-600: #c7792f;
+  --color-putty-700: #a65f28;
+  --color-putty-800: #854d27;
+  --color-putty-900: #6b3f23;
+  --color-putty-950: #3a1f10;
+
+
+
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Smooth scrolling for the entire app */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced focus states for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-putty-400);
+  outline-offset: 2px;
+  transition: outline-offset 0.2s ease;
+}
+
+/* Smooth transitions for interactive elements */
+button, a, input, textarea, select {
+  transition: all 0.2s ease;
+}
+
+/* Enhanced hover effects for links */
+a:hover {
+  opacity: 0.8;
+}
+
+/* Smooth transitions for form inputs */
+input:focus, textarea:focus, select:focus {
+  transform: scale(1.01);
+  transition: transform 0.2s ease;
+}
+
+/* Loading skeleton animation */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+  background: linear-gradient(
+    to right,
+    #f0f0f0 0%,
+    #e0e0e0 20%,
+    #f0f0f0 40%,
+    #f0f0f0 100%
+  );
+  background-size: 1000px 100%;
+}
+
+/* Smooth page transitions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.page-transition {
+  animation: fadeIn 0.3s ease-in;
+}
