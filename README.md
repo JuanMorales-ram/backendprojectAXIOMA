@@ -111,14 +111,14 @@ touch .env.local
 # ============================================
 # SUPABASE - Variables Públicas (Cliente)
 # ============================================
-NEXT_PUBLIC_SUPABASE_URL=https://gdbumptceyretabtsgzb.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=sb_publishable_LGd2l9d6Hgh_KG86wbX-WQ__T5tjUpP
+NEXT_PUBLIC_SUPABASE_URL=""
+NEXT_PUBLIC_SUPABASE_ANON_KEY=""
 
 # ============================================
 # SUPABASE - Variables Privadas (Backend Only)
 #  NUNCA exponer estas claves al cliente
 # ============================================
-SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdkYnVtcHRjZXlyZXRhYnRzZ3piIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3Njg3MzQ1MSwiZXhwIjoyMDkyNDQ5NDUxfQ.F1wFOMibskzlVP976GQfnq6ES0uP3z55sF7iwS4mBbA
+SUPABASE_SERVICE_ROLE_KEY=""
 
 # ============================================
 # EMAIL - Resend Configuration
@@ -663,13 +663,13 @@ describe('CRUD Operations', () => {
 
 ### Buenas Prácticas Implementadas
 
-- ✅ Row Level Security (RLS) en todas las tablas
-- ✅ Validación de usuarios autenticados
-- ✅ Control de acceso basado en roles (RBAC)
-- ✅ Headers de seguridad HTTP configurados
-- ✅ Content Security Policy (CSP)
-- ✅ Protección contra ataques comunes
-- ✅ Variables sensibles en `.env.local` (no en Git)
+-  Row Level Security (RLS) en todas las tablas
+-  Validación de usuarios autenticados
+-  Control de acceso basado en roles (RBAC)
+-  Headers de seguridad HTTP configurados
+-  Content Security Policy (CSP)
+-  Protección contra ataques comunes
+-  Variables sensibles en `.env.local` (no en Git)
 
 ### Headers de Seguridad
 
